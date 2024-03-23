@@ -6,3 +6,5 @@
 - Need a coffee? Finding a local grocer? The Aggie Business Finder (not trademarked, yet...) helps you with these resources while supporting aggies!
 
 Languages used: HTML, CSS, Javascript
+
+To view files: go to main branch
