@@ -4,21 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content=""width=device-width, initial-scale="1.0">
     <title>Aggie Business Finder</title>
-    <style src="main.css"></style>
-
 </head>
 <body>
-    <div class="flex-box-element">
-    <div id="Title">Aggie Business Finder</div>
-    <div id="SubTitle">By: Josh Eng, Nicholas Battin, Frank Zhao</div>
+        <script>
+        var businessArray = ["Mess Waffles - Restaurant", "Sweet Paris - Restaurant", "Mo's Irish Pub - Restaurant", "Snooze, an A.M. Eatery - Restaurant", "ALPHAGRAPHICS BCS - Printing Company", "AGG General Contract, LLC - Construction"];
+        var businessList = {"Mess Waffles - Restaurant":"Chicken AND waffles? Yum! Mess Cafe started as a food truck here in College Station, eventually becoming a beloved spot for many hungry college students. Who doesn't love some fried chicken?", "Sweet Paris - Restaurant":"Sweet Paris offers some of the best crepes and coffee that you are going to find here in B/CS. Live your French dream here in Texas", "Mo's Irish Pub - Restaurant":"Some enchiladas and beer? Sign me up! Mo's Irish Pub offers this and more, with an assortment of delicious dishes and cocktails to spend a Saturday night devoring", "Snooze, an A.M. Eatery - Restaurant":"While this place seems like a simple breakfast place, the variety and food selection is unmatched here in B/CS. Enjoy a mimosa and some mouth-watering tacos", "ALPHAGRAPHICS BCS - Printing Company":"AlphaGraphics Bryan/College Station is a custom manufacturer of print and marketing communications. Formerly Tops Printing, we have been successfully servicing the Brazos Valley and surrounding areas.", "AGG General Contract, LLC - Construction":"Remodeling, Bathroom Remodeling, Kitchen Remodeling, Residential Remodeling, Roofing, Flooring, Drywall, Painting, Carpentry, Window Replacement, Door Replacement"};
+        var keysArray = Object.keys(businessList);
+        function displayBusiness() {
+        let num = Math.floor(Math.random() * 5);
+        document.getElementById("business-name").innerHTML = businessArray[num];
+        document.getElementById("business-desc").innerHTML = businessList[keysArray[num]];
+        };
+        </script>
+        <div class="content-block" style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <div style="font-style: italic; font-size: 2em;">Random Business of the Day:
+        <button onclick="displayBusiness()" style="background-color: #500000; align-items: center; align-content: center; color: white; font-size: 0.75em; border-radius: 4px;">Random Business</button>
+        </div>
+        </div>
+        <br>
+        <div class="info-box" style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <div id="business-name" style="font-size: 2.5em;"></div>
+        <br>
+        <div id="business-desc" style="font-size: 1.5em"></div>
+        </div>
 
-    <div id="button"></div>
-    
-    <script src="google_display.js"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWNXnP6ViRcrP_8Dkcq6xH51pKoVDeO54&loading=async&libraries=places&callback=initMap">
-    </script>
-
-    <div id="map"></div>
-    </div>
 </body>
