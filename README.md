@@ -9,4 +9,4 @@ Languages used: HTML, CSS, Javascript
 
 Link to Website: https://sites.google.com/tamu.edu/aggiesbusinessfindercom/restaurants
 
-To view webapp-files: go to main branch
+To view webapp-file using on Google Sites: go to main branch
